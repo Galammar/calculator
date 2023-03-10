@@ -9,35 +9,110 @@ export default function Home() {
       <Head>
         <title>Create Next App</title>
       </Head>
-
       <main className={styles.main}>
         <div className={styles.textbox}>{calOutput}</div>
         <div className={styles.buttons}>
           <div>
-            <button onClick={() => setCalOutput(calOutput + 1)}>1</button>
-            <button onClick={() => setCalOutput(calOutput + 2)}>2</button>
-            <button onClick={() => setCalOutput(calOutput + 3)}>3</button>
+            <button
+              className={styles.pad}
+              onClick={() => setCalOutput(calOutput + 1)}
+            >
+              1
+            </button>
+            <button
+              className={styles.pad}
+              onClick={() => setCalOutput(calOutput + 2)}
+            >
+              2
+            </button>
+            <button
+              className={styles.pad}
+              onClick={() => setCalOutput(calOutput + 3)}
+            >
+              3
+            </button>
           </div>
           <div>
-            <button onClick={() => setCalOutput(calOutput + 4)}>4</button>
-            <button onClick={() => setCalOutput(calOutput + 5)}>5</button>
-            <button onClick={() => setCalOutput(calOutput + 6)}>6</button>
+            <button
+              className={styles.pad}
+              onClick={() => setCalOutput(calOutput + 4)}
+            >
+              4
+            </button>
+            <button
+              className={styles.pad}
+              onClick={() => setCalOutput(calOutput + 5)}
+            >
+              5
+            </button>
+            <button
+              className={styles.pad}
+              onClick={() => setCalOutput(calOutput + 6)}
+            >
+              6
+            </button>
           </div>
           <div>
-            <button onClick={() => setCalOutput(calOutput + 7)}>7</button>
-            <button onClick={() => setCalOutput(calOutput + 8)}>8</button>
-            <button onClick={() => setCalOutput(calOutput + 9)}>9</button>
+            <button
+              className={styles.pad}
+              onClick={() => setCalOutput(calOutput + 7)}
+            >
+              7
+            </button>
+            <button
+              className={styles.pad}
+              onClick={() => setCalOutput(calOutput + 8)}
+            >
+              8
+            </button>
+            <button
+              className={styles.pad}
+              onClick={() => setCalOutput(calOutput + 9)}
+            >
+              9
+            </button>
           </div>
           <div>
-            <button onClick={() => setCalOutput(calOutput + '+')}>+</button>
-            <button onClick={() => setCalOutput(calOutput + '-')}>-</button>
-          </div>
-          <div>
-            <button onClick={() => setCalOutput(calOutput + '*')}>*</button>
-            <button onClick={() => setCalOutput(calOutput + '/')}>/</button>
-          </div>
-          <div>
-            <button onClick={() => setCalOutput(eval(calOutput))}>=</button>
+            <button
+              className={(styles.zero, styles.pad)}
+              onClick={() => setCalOutput(calOutput + 0)}
+            >
+              0
+            </button>
+            <button
+              className={(styles.differentBtn, styles.pad)}
+              onClick={() => setCalOutput(calOutput + '+')}
+            >
+              +
+            </button>
+            <button
+              className={(styles.differentBtn, styles.pad)}
+              onClick={() => setCalOutput(calOutput + '-')}
+            >
+              -
+            </button>
+            <div className={styles.other}></div>
+            <div></div>
+            <div>
+              <button
+                className={(styles.differentBtn, styles.pad)}
+                onClick={() => setCalOutput(calOutput + '*')}
+              >
+                *
+              </button>
+              <button
+                className={(styles.differentBtn, styles.pad)}
+                onClick={() => setCalOutput(calOutput + '/')}
+              >
+                /
+              </button>
+              <button
+                className={(styles.equals, styles.pad)}
+                onClick={() => setCalOutput(eval(calOutput))}
+              >
+                =
+              </button>
+            </div>
           </div>
         </div>
       </main>

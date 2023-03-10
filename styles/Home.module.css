@@ -9,9 +9,13 @@
 
 .buttons {
   background-color: antiquewhite;
-  max-width: 500px;
+  min-width: 100px;
 }
 
 .textbox {
   background-color: aliceblue;
+}
+
+.pad {
+  padding: 40px;
 }
